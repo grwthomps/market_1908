@@ -15,4 +15,12 @@ class Vendor
     @inventory[item] += amount
   end
 
+  def all_items_in_stock
+    items = []
+    @inventory.each do |item, _|
+      items << item
+    end
+    items
+  end
+
 end
